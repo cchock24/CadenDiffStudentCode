@@ -19,11 +19,12 @@ public class PlagiarismChecker {
         int length2 = doc2.length();
         int[][] saved = new int[length1][length2];
 
-        return check(doc1,doc2,0,0,saved);
+        int thing = check(doc1,doc2,0,0,saved);
+        return thing;
     }
 
     public static int check(String doc1, String doc2, int index1, int index2, int[][] saved){
-       int[] length = {0,0,0};
+       int biggest = 0;
         // Base Case if either word reaches end
         if(index1 >= doc1.length()){
             return 0;
@@ -38,18 +39,11 @@ public class PlagiarismChecker {
         // If letter matches include
         // Otherwise remove from doc1 and remove from doc2
         if(doc1.charAt(index1) == doc2.charAt(index2)){
-            length[0] += check(doc1,doc2,index1+1,index2+1,saved) +1;
+            biggest += check(doc1,doc2,index1+1,index2+1,saved) +1;
         }
         else{
-            length[1] += check(doc1,doc2,index1+1,index2,saved);
-            length[2] += check(doc1,doc2,index1,index2+1,saved);
-        }
-        // Get the biggest length from all the paths
-        int biggest = 0;
-        for(int i = 0; i < length.length; i++){
-            if(length[i] > biggest){
-                biggest = length[i];
-            }
+            // Get the biggest answer from the going left or down
+            biggest = Math.max(check(doc1,doc2,index1+1,index2,saved), check(doc1,doc2,index1,index2+1,saved));
         }
         saved[index1][index2] = biggest;
         return biggest;

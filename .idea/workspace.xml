@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f68ad4e4-7dd7-4950-93fb-5d96ae262228" name="Changes" comment=".">
-      <change beforePath="$PROJECT_DIR$/WORK_LOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/WORK_LOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PlagiarismChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PlagiarismChecker.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,7 +40,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Downloaded.Files.Path.Enabled": "false",
-    "JUnit.PlagiarismCheckerTest.executor": "Run",
+    "JUnit.PlagiarismCheckerTest.executor": "Debug",
     "JUnit.PlagiarismCheckerTest.testCorrectMed.executor": "Run",
     "JUnit.PlagiarismCheckerTest.testCorrectSmall.executor": "Run",
     "JUnit.PlagiarismCheckerTest.testEdgeCase.executor": "Run",
@@ -55,7 +55,7 @@
     "kotlin-language-version-configured": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.PlagiarismCheckerTest">
+  <component name="RunManager" selected="JUnit.PlagiarismCheckerTest.testCorrectSmall">
     <configuration name="PlagiarismCheckerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DiffStudentCode" />
       <option name="PACKAGE_NAME" value="" />
@@ -65,11 +65,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PlagiarismCheckerTest.testCorrectMed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PlagiarismCheckerTest.testCorrectSmall" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DiffStudentCode" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="PlagiarismCheckerTest" />
-      <option name="METHOD_NAME" value="testCorrectMed" />
+      <option name="METHOD_NAME" value="testCorrectSmall" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -107,11 +107,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PlagiarismCheckerTest.testCorrectSmall" />
         <item itemvalue="JUnit.PlagiarismCheckerTest" />
         <item itemvalue="JUnit.PlagiarismCheckerTest.testEdgeCase" />
         <item itemvalue="JUnit.PlagiarismCheckerTest.testEfficientLargest" />
         <item itemvalue="JUnit.PlagiarismCheckerTest.testEfficientLarge" />
-        <item itemvalue="JUnit.PlagiarismCheckerTest.testCorrectMed" />
       </list>
     </recent_temporary>
   </component>
@@ -132,11 +132,30 @@
       <option name="project" value="LOCAL" />
       <updated>1740732984666</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary=".">
+      <option name="closed" value="true" />
+      <created>1740733240540</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1740733240540</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="." />
     <option name="LAST_COMMIT_MESSAGE" value="." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/PlagiarismChecker.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
