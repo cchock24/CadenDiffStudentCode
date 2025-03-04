@@ -17,12 +17,36 @@ public class PlagiarismChecker {
     public static int longestSharedSubstring(String doc1, String doc2) {
         int length1 = doc1.length();
         int length2 = doc2.length();
-        int[][] saved = new int[length1][length2];
+        int[][] saved;
 
-        int thing = check(doc1,doc2,0,0,saved);
+        // Memoization Approach
+        /*saved = new int[length1][length2];
+        int thing = check(doc1,doc2,0,0,saved); */
+        // Tabulation approach
+        saved = new int[length1+1][length2+1];
+        int thing = tab(doc1,doc2,saved);
         return thing;
     }
 
+    // Tabulation Approach
+    public static int tab(String doc1, String doc2, int[][] saved){
+        // Start at 1 to prevent out of bounds
+        for(int i = 1; i < doc1.length()+1; i++){
+            for(int j = 1; j < doc2.length()+1;j++){
+                // If Letters Match Box equal to TOp left+1
+                if(doc1.charAt(i-1) == doc2.charAt(j-1)){
+                    saved[i][j] = saved[i-1][j-1]+1;
+                }
+                // Equal to Max of one to its left or up
+                else{
+                    saved[i][j] = Math.max(saved[i][j-1],saved[i-1][j]);
+                }
+            }
+        }
+        return saved[saved.length-1][saved[0].length-1];
+    }
+
+    // Memoization Approach
     public static int check(String doc1, String doc2, int index1, int index2, int[][] saved){
        int biggest = 0;
         // Base Case if either word reaches end
